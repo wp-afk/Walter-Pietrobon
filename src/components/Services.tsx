@@ -15,7 +15,7 @@ export default function Services() {
       id: 'drone',
       title: 'Filmación con Drone 4K',
       description: 'Perspectivas cinematográficas únicas. Tecnología de vanguardia para tomas aéreas fluidas y de alto impacto.',
-      image: 'https://lh3.googleusercontent.com/d/1C1nyToorfXOqFVc1tSVTAwNCKVqH1FS6',
+      image: 'https://lh3.googleusercontent.com/d/18pfi4Iq7yI482qKkIInW-MfLZUaq1OCL',
       icon: <Plane className="w-6 h-6" />,
       tag: '02'
     },
