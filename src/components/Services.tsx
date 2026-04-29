@@ -7,7 +7,7 @@ export default function Services() {
       id: 'photography',
       title: 'Fotografía Profesional',
       description: 'Captura de detalles con luz natural y composición artística. Enfoque en arquitectura, eventos y producto.',
-      image: '/images/photography.jpg',
+      image: 'https://lh3.googleusercontent.com/d/1oIHnP388N6awZy1N57_UcgIc4jG3dZyj',
       icon: <Camera className="w-6 h-6" />,
       tag: '01'
     },
@@ -15,7 +15,7 @@ export default function Services() {
       id: 'drone',
       title: 'Filmación con Drone 4K',
       description: 'Perspectivas cinematográficas únicas. Tecnología de vanguardia para tomas aéreas fluidas y de alto impacto.',
-      image: '/images/drone.jpg',
+      image: 'https://lh3.googleusercontent.com/d/1C1nyToorfXOqFVc1tSVTAwNCKVqH1FS6',
       icon: <Plane className="w-6 h-6" />,
       tag: '02'
     },
