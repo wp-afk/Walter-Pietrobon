@@ -27,10 +27,10 @@ export default function App() {
           </div>
           <div className="w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="aspect-square bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 group">
-               <img src="/images/portfolio-1.jpg" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Portfolio 1" referrerPolicy="no-referrer" />
+               <img src="/images/portfolio-1.jpg" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Portfolio 1" />
             </div>
             <div className="aspect-square bg-white rounded-3xl overflow-hidden shadow-sm sm:mt-12 hover:shadow-xl transition-shadow duration-500 group">
-               <img src="/images/portfolio-2.jpg" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Portfolio 2" referrerPolicy="no-referrer" />
+               <img src="/images/portfolio-2.jpg" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Portfolio 2" />
             </div>
           </div>
         </div>

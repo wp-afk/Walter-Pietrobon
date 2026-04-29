@@ -8,7 +8,6 @@ export default function Hero() {
           src="/images/hero-background.jpg"
           alt="Walter Pietrobon - Servicios Audiovisuales"
           className="w-full h-full object-cover object-[center_30%]"
-          referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-linear-to-b from-white/30 via-transparent to-white" />
       </div>
