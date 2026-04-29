@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-[#1D1D1F] bg-[#F5F5F7];
+  }
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-linear-to-b from-[#1D1D1F] to-[#86868B];
+}
+
+.glass {
+  @apply backdrop-blur-md bg-white/70 border border-white/20;
+}
