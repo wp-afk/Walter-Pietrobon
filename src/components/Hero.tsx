@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative min-h-[70vh] md:h-[85vh] flex items-center justify-center overflow-hidden bg-white">
       <div className="absolute inset-0 z-0 opacity-60">
         <img
-          src="/images/hero-background.jpg"
+          src="https://lh3.googleusercontent.com/d/1KL1TTWMTonb8j6C5sAemf6VUNgJvkir7"
           alt="Walter Pietrobon - Servicios Audiovisuales"
           className="w-full h-full object-cover object-[center_30%]"
         />
