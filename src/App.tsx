@@ -44,6 +44,7 @@ export default function App() {
             © 2026 WALTER PIETROBON.
           </div>
           <div className="flex gap-8">
+            <a href="mailto:wp@wpietrobon.com" className="hover:text-[#1D1D1F] transition-colors">wp@wpietrobon.com</a>
             <a href="#" className="hover:text-[#1D1D1F] transition-colors">Términos</a>
             <a href="#" className="hover:text-[#1D1D1F] transition-colors">Privacidad</a>
             <a href="#" className="hover:text-[#1D1D1F] transition-colors">Instagram</a>
