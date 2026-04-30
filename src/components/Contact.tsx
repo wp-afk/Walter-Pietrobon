@@ -6,10 +6,6 @@ export default function Contact() {
     window.open('https://wa.me/2615437508', '_blank');
   };
 
-  const handleEmail = () => {
-    window.location.href = 'mailto:wp@wpietrobon.com';
-  };
-
   return (
     <section id="contacto" className="py-12 md:py-24 px-4 md:px-12 bg-[#F5F5F7]">
       <div className="max-w-7xl mx-auto text-center">
@@ -36,12 +32,12 @@ export default function Contact() {
                 Hablemos por WhatsApp
               </button>
               
-              <button 
-                onClick={handleEmail}
-                className="text-[#1D1D1F] px-8 md:px-10 py-4 md:py-5 border border-[#D2D2D7] rounded-full text-lg font-medium hover:bg-[#F5F5F7] transition-all duration-300 w-full sm:w-auto"
+              <a 
+                href="mailto:wp@wpietrobon.com"
+                className="text-[#1D1D1F] px-8 md:px-10 py-4 md:py-5 border border-[#D2D2D7] rounded-full text-lg font-medium hover:bg-[#F5F5F7] transition-all duration-300 w-full sm:w-auto flex items-center justify-center"
               >
                 Enviar E-mail
-              </button>
+              </a>
             </div>
             
             <div className="pt-8 md:pt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 text-sm text-[#86868B]">
