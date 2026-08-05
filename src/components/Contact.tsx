@@ -40,14 +40,25 @@ export default function Contact() {
               </a>
             </div>
             
-            <div className="pt-8 md:pt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 text-sm text-[#86868B]">
+            <div className="pt-8 md:pt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm text-[#86868B]">
               <div>
                 <p className="font-semibold text-[#1D1D1F] uppercase tracking-wider mb-2">WhatsApp Directo</p>
                 <p>+54 261 543 7508</p>
               </div>
               <div>
                 <p className="font-semibold text-[#1D1D1F] uppercase tracking-wider mb-2">E-mail</p>
-                <p>wp@wpietrobon.com</p>
+                <a href="mailto:wp@wpietrobon.com" className="hover:text-[#1D1D1F] transition-colors">wp@wpietrobon.com</a>
+              </div>
+              <div>
+                <p className="font-semibold text-[#1D1D1F] uppercase tracking-wider mb-2">Instagram</p>
+                <a 
+                  href="https://instagram.com/wpietrobon" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-[#1D1D1F] transition-colors"
+                >
+                  @wpietrobon
+                </a>
               </div>
               <div>
                 <p className="font-semibold text-[#1D1D1F] uppercase tracking-wider mb-2">Localización</p>
