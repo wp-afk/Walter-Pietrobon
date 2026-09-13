@@ -3,25 +3,76 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Contact from './components/Contact';
 
 export default function App() {
+  const [isIgBrowser, setIsIgBrowser] = useState(false);
+
   useEffect(() => {
-    if (window.location.pathname === '/Barrio_Vista_Pueblo_Mza_G_casa_14') {
-      window.location.href = 'https://script.google.com/a/wpietrobon.com/macros/s/AKfycbxIHFmWkPhXes9gSIqRt8evjMtFOxYPNF4MZH9sh2GLjiRgcg1q4kQ4CW5Fj-AmxJIg8w/exec?page=viewer&folderId=16fJNx6-KEscDv4e-Bnw0AVj4gwGv6HQL';
-    } else if (window.location.pathname === '/Barrio_Las_Cortaderas_II_Mza_K_casa_7') {
-      window.location.href = 'https://script.google.com/a/wpietrobon.com/macros/s/AKfycbxIHFmWkPhXes9gSIqRt8evjMtFOxYPNF4MZH9sh2GLjiRgcg1q4kQ4CW5Fj-AmxJIg8w/exec?page=viewer&folderId=1tZXZn23wysaiHgpqRSQY0YHbt4Ij5RMw';
+    const path = window.location.pathname;
+    let targetUrl = '';
+    
+    if (path === '/Barrio_Vista_Pueblo_Mza_G_casa_14') {
+      targetUrl = 'https://script.google.com/a/wpietrobon.com/macros/s/AKfycbxIHFmWkPhXes9gSIqRt8evjMtFOxYPNF4MZH9sh2GLjiRgcg1q4kQ4CW5Fj-AmxJIg8w/exec?page=viewer&folderId=16fJNx6-KEscDv4e-Bnw0AVj4gwGv6HQL';
+    } else if (path === '/Barrio_Las_Cortaderas_II_Mza_K_casa_7') {
+      targetUrl = 'https://script.google.com/a/wpietrobon.com/macros/s/AKfycbxIHFmWkPhXes9gSIqRt8evjMtFOxYPNF4MZH9sh2GLjiRgcg1q4kQ4CW5Fj-AmxJIg8w/exec?page=viewer&folderId=1tZXZn23wysaiHgpqRSQY0YHbt4Ij5RMw';
+    }
+
+    if (targetUrl) {
+      const ua = navigator.userAgent || navigator.vendor || (window as any).opera;
+      if (ua.indexOf('Instagram') > -1 || ua.indexOf('FBAN') > -1 || ua.indexOf('FBAV') > -1) {
+        setIsIgBrowser(true);
+      } else {
+        window.location.href = targetUrl;
+      }
     }
   }, []);
 
   if (window.location.pathname === '/Barrio_Vista_Pueblo_Mza_G_casa_14' || window.location.pathname === '/Barrio_Las_Cortaderas_II_Mza_K_casa_7') {
+    if (isIgBrowser) {
+      return (
+        <div className="min-h-screen flex flex-col items-center justify-center bg-[#F5F5F7] text-[#1D1D1F] p-6 text-center">
+          <div className="bg-white p-8 rounded-3xl shadow-sm max-w-md w-full space-y-6">
+            <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+            </div>
+            <h2 className="text-2xl font-semibold">Casi listo...</h2>
+            <p className="text-[#86868B]">
+              El navegador de Instagram no soporta Tours 360 completos. Para verlo correctamente:
+            </p>
+            <div className="bg-gray-50 p-4 rounded-xl text-left space-y-3 border border-gray-100">
+              <p className="text-sm font-medium flex items-center gap-2">
+                <span className="bg-black text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">1</span> 
+                Toca los 3 puntos (•••) arriba a la derecha
+              </p>
+              <p className="text-sm font-medium flex items-center gap-2">
+                <span className="bg-black text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">2</span>
+                Selecciona "Abrir en el navegador"
+              </p>
+            </div>
+            <div className="pt-4">
+              <button 
+                onClick={() => {
+                  navigator.clipboard.writeText(window.location.href);
+                  alert('¡Enlace copiado! Pégalo en tu navegador.');
+                }}
+                className="text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors"
+              >
+                O copiar enlace manualmente
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#F5F5F7] text-[#1D1D1F]">
-        <p className="text-xl font-light">Redirigiendo a tu aplicación...</p>
+        <p className="text-xl font-light">Redirigiendo al Tour 360...</p>
       </div>
     );
   }

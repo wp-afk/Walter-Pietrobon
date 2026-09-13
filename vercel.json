@@ -1,16 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/Barrio_Vista_Pueblo_Mza_G_casa_14",
-      "destination": "https://script.google.com/a/wpietrobon.com/macros/s/AKfycbxIHFmWkPhXes9gSIqRt8evjMtFOxYPNF4MZH9sh2GLjiRgcg1q4kQ4CW5Fj-AmxJIg8w/exec?page=viewer&folderId=16fJNx6-KEscDv4e-Bnw0AVj4gwGv6HQL",
-      "permanent": false
-    },
-    {
-      "source": "/Barrio_Las_Cortaderas_II_Mza_K_casa_7",
-      "destination": "https://script.google.com/a/wpietrobon.com/macros/s/AKfycbxIHFmWkPhXes9gSIqRt8evjMtFOxYPNF4MZH9sh2GLjiRgcg1q4kQ4CW5Fj-AmxJIg8w/exec?page=viewer&folderId=1tZXZn23wysaiHgpqRSQY0YHbt4Ij5RMw",
-      "permanent": false
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
