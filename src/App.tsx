@@ -3,12 +3,27 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Contact from './components/Contact';
 
 export default function App() {
+  useEffect(() => {
+    if (window.location.pathname === '/Barrio_Vista_Pueblo_Mza_G_casa_14') {
+      window.location.href = 'https://script.google.com/a/wpietrobon.com/macros/s/AKfycbxIHFmWkPhXes9gSIqRt8evjMtFOxYPNF4MZH9sh2GLjiRgcg1q4kQ4CW5Fj-AmxJIg8w/exec?page=viewer&folderId=16fJNx6-KEscDv4e-Bnw0AVj4gwGv6HQL';
+    }
+  }, []);
+
+  if (window.location.pathname === '/Barrio_Vista_Pueblo_Mza_G_casa_14') {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#F5F5F7] text-[#1D1D1F]">
+        <p className="text-xl font-light">Redirigiendo a tu aplicación...</p>
+      </div>
+    );
+  }
+
   return (
     <main className="min-h-screen">
       <Navbar />
