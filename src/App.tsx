@@ -13,10 +13,12 @@ export default function App() {
   useEffect(() => {
     if (window.location.pathname === '/Barrio_Vista_Pueblo_Mza_G_casa_14') {
       window.location.href = 'https://script.google.com/a/wpietrobon.com/macros/s/AKfycbxIHFmWkPhXes9gSIqRt8evjMtFOxYPNF4MZH9sh2GLjiRgcg1q4kQ4CW5Fj-AmxJIg8w/exec?page=viewer&folderId=16fJNx6-KEscDv4e-Bnw0AVj4gwGv6HQL';
+    } else if (window.location.pathname === '/Barrio_Las_Cortaderas_II_Mza_K_casa_7') {
+      window.location.href = 'https://script.google.com/a/wpietrobon.com/macros/s/AKfycbxIHFmWkPhXes9gSIqRt8evjMtFOxYPNF4MZH9sh2GLjiRgcg1q4kQ4CW5Fj-AmxJIg8w/exec?page=viewer&folderId=1tZXZn23wysaiHgpqRSQY0YHbt4Ij5RMw';
     }
   }, []);
 
-  if (window.location.pathname === '/Barrio_Vista_Pueblo_Mza_G_casa_14') {
+  if (window.location.pathname === '/Barrio_Vista_Pueblo_Mza_G_casa_14' || window.location.pathname === '/Barrio_Las_Cortaderas_II_Mza_K_casa_7') {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#F5F5F7] text-[#1D1D1F]">
         <p className="text-xl font-light">Redirigiendo a tu aplicación...</p>
